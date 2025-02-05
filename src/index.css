@@ -1,13 +1,48 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto+Slab:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-family: 'Roboto Slab', sans-serif;
+  line-height: 1.5;
+
+  color: #ebe7ef;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: radial-gradient(
+      circle at top,
+      rgba(241, 210, 70, 0.98),
+      rgba(250, 176, 103, 0.87)
+    ),
+    url('../public/bg-pattern-dark.png');
+  background-repeat: repeat;
+  background-size: 100% 100%, 30% 30%, 100% 100%;
+  min-height: 110rem;
+}
+
+header {
+  text-align: center;
+}
+
+header img {
+  width: 8rem;
+  object-fit: contain;
+  margin: 3rem auto 1rem auto;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.4));
+}
+
+h1 {
+  font-family: 'Caprasimo', cursive;
+  font-size: 3rem;
+  margin: 0 auto 3rem auto;
+  color: #3f3b00;
 }
