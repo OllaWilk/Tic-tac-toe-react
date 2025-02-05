@@ -5,10 +5,10 @@
 }
 
 html {
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: var(--font-text);
   line-height: 1.5;
 
-  color: #ebe7ef;
+  color: var(--color-light);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,10 +20,10 @@ html {
 body {
   background: radial-gradient(
       circle at top,
-      rgba(241, 210, 70, 0.98),
-      rgba(250, 176, 103, 0.87)
+      var(--color-yellow-light),
+      var(--color-yellow-dark)
     ),
-    url('../public/bg-pattern-dark.png');
+    url('../../public/bg-pattern-dark.png');
   background-repeat: repeat;
   background-size: 100% 100%, 30% 30%, 100% 100%;
   min-height: 110rem;
@@ -44,5 +44,5 @@ h1 {
   font-family: 'Caprasimo', cursive;
   font-size: 3rem;
   margin: 0 auto 3rem auto;
-  color: #3f3b00;
+  color: var(--color-dark);
 }

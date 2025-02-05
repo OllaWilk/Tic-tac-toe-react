@@ -1,0 +1,7 @@
+:root {
+  --color-light: #ebe7ef;
+  --color-dark: #3f3b00;
+  --color-yellow-light: rgba(241, 210, 70, 0.98);
+  --color-yellow-dark: rgba(250, 176, 103, 0.87);
+  --font-text: 'Roboto Slab', sans-serif;
+}
