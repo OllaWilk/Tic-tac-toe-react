@@ -1,5 +1,6 @@
 import React from 'react';
 import { Player } from './components/Player/Player';
+import { GameBoard } from './components/GameBoard/GameBoard';
 import './styles/app.css';
 
 export function App() {
@@ -11,7 +12,7 @@ export function App() {
           <Player initialName='player 2' symbol='0' />
         </ol>
       </div>
-      GameBoard
+      <GameBoard />
     </main>
   );
 }
