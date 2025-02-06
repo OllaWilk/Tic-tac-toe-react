@@ -23,3 +23,15 @@
   font-size: 1rem;
   color: #e1dec7;
 }
+
+.player input {
+  font: inherit;
+  font-size: 1rem;
+  width: 10rem;
+  border: none;
+  padding: 0.5rem;
+  animation: pulse-text 2s infinite;
+  background-color: #46432f;
+  text-align: center;
+  text-transform: uppercase;
+}
