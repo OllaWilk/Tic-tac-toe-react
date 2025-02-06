@@ -11,8 +11,8 @@ export function App() {
           <Player initialName='player 1' symbol='x' />
           <Player initialName='player 2' symbol='0' />
         </ol>
+        <GameBoard />
       </div>
-      <GameBoard />
     </main>
   );
 }
