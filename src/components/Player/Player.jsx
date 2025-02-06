@@ -10,7 +10,6 @@ export const Player = ({ initialName, symbol }) => {
   };
 
   const handleChange = (event) => {
-    console.log(event);
     setPlayerName(event.target.value);
   };
 
