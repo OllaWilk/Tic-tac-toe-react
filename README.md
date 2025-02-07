@@ -1,4 +1,4 @@
-# 🎮❌⭕ Tic-Tac-Toe in React.js
+# 🎮 Tic-Tac-Toe in React.js
 
 Welcome to the Tic-Tac-Toe game built with React! 🏆 This project is a simple yet interactive version of the classic game, allowing two players to compete in turns. Let's dive into how it works! 🚀
 
@@ -10,7 +10,7 @@ Welcome to the Tic-Tac-Toe game built with React! 🏆 This project is a simple 
 
 ## ✨ Features
 
-    ✅  Player name editing 📝
+    ✅ Player name editing 📝
 
     ✅ Turn-based game logic 🔄
 
