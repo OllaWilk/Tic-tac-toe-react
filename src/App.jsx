@@ -1,15 +1,32 @@
 import React, { useState } from 'react';
-import { WINING_COMBINATIONS } from './utils/winingCombination';
+import { winCheck } from './utils/winCheck';
 import { deriveActivePlayer } from './utils/deriveActivePlayer';
 import { Player } from './components/Player/Player';
 import { GameBoard } from './components/GameBoard/GameBoard';
 import { Log } from './components/Log/Log';
 import './styles/app.css';
 
+const initialGameBoard = [
+  [null, null, null],
+  [null, null, null],
+  [null, null, null],
+];
+
 export function App() {
   const [gameTurns, setGameTurns] = useState([]);
 
   const currentPlayer = deriveActivePlayer(gameTurns);
+
+  let gameBoard = initialGameBoard;
+
+  for (const turn of gameTurns) {
+    const { square, player } = turn;
+    const { row, col } = square;
+
+    gameBoard[row][col] = player;
+  }
+
+  const winner = winCheck(gameBoard);
 
   const handleSelectSquare = (rowIndex, colIndex) => {
     setGameTurns((prevTurns) => {
@@ -39,7 +56,8 @@ export function App() {
             isActive={currentPlayer === 'O'}
           />
         </ol>
-        <GameBoard onSelectSquare={handleSelectSquare} turns={gameTurns} />
+        {winner && <p>You won, {winner}</p>}
+        <GameBoard onSelectSquare={handleSelectSquare} board={gameBoard} />
       </div>
       <Log turns={gameTurns} />
     </main>

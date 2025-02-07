@@ -1,25 +1,10 @@
 import React from 'react';
 import './GameBoard.css';
 
-const initialGameBoard = [
-  [null, null, null],
-  [null, null, null],
-  [null, null, null],
-];
-
-export const GameBoard = ({ onSelectSquare, turns }) => {
-  let gameBoard = initialGameBoard;
-
-  for (const turn of turns) {
-    const { square, player } = turn;
-    const { row, col } = square;
-
-    gameBoard[row][col] = player;
-  }
-
+export const GameBoard = ({ onSelectSquare, board }) => {
   return (
     <ol id='game-board'>
-      {gameBoard.map((row, rowIndex) => (
+      {board.map((row, rowIndex) => (
         <li key={`${rowIndex}-row`}>
           <ol>
             {row.map((playerSymbol, colIndex) => (
