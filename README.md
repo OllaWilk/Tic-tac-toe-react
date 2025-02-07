@@ -10,7 +10,7 @@ Welcome to the Tic-Tac-Toe game built with React! 🏆 This project is a simple 
 
 ## ✨ Features
 
-    ✅  Player name editing 📝
+    ✅ Player name editing 📝
 
     ✅ Turn-based game logic 🔄
 
