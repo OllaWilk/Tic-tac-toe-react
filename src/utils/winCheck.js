@@ -1,6 +1,6 @@
 import { WINING_COMBINATIONS } from './winingCombination';
 
-export const winCheck = (gameBoard) => {
+export const winCheck = (gameBoard, players) => {
   let winner;
 
   for (const combination of WINING_COMBINATIONS) {
@@ -14,7 +14,7 @@ export const winCheck = (gameBoard) => {
       firstSquareSymbol === secondSquareSymbol &&
       firstSquareSymbol === thirdSquareSymbol
     ) {
-      winner = firstSquareSymbol;
+      winner = players[firstSquareSymbol];
     }
   }
   return winner;

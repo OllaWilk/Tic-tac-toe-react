@@ -20,7 +20,7 @@ export const WINING_COMBINATIONS = [
     },
     {
       row: 1,
-      col: 2,
+      col: 1,
     },
     {
       row: 1,
