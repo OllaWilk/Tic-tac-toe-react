@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { deriveActivePlayer } from './components/utils/deriveActivePlayer';
+import { deriveActivePlayer } from './utils/deriveActivePlayer';
 import { Player } from './components/Player/Player';
 import { GameBoard } from './components/GameBoard/GameBoard';
 import { Log } from './components/Log/Log';
