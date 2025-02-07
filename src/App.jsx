@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import { deriveActivePlayer } from './components/utils/deriveActivePlayer';
 import { Player } from './components/Player/Player';
 import { GameBoard } from './components/GameBoard/GameBoard';
 import { Log } from './components/Log/Log';
 import './styles/app.css';
-import { deriveActivePlayer } from './components/utils/deriveActivePlayer';
 
 export function App() {
   const [gameTurns, setGameTurns] = useState([]);
