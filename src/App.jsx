@@ -1,33 +1,20 @@
 import React, { useState } from 'react';
+import { PLAYERS } from './data';
 import { winCheck } from './utils/winCheck';
 import { deriveActivePlayer } from './utils/deriveActivePlayer';
+import { deriveGameBoard } from './utils/deriveGameBoard';
 import { Player } from './components/Player/Player';
 import { GameBoard } from './components/GameBoard/GameBoard';
 import { Log } from './components/Log/Log';
 import { GameOver } from './components/GameOver/GameOver';
 import './styles/app.css';
 
-const initialGameBoard = [
-  [null, null, null],
-  [null, null, null],
-  [null, null, null],
-];
-
 export function App() {
-  const [players, setPlayers] = useState({ X: 'Player 1', O: 'Player 2' });
+  const [players, setPlayers] = useState(PLAYERS);
   const [gameTurns, setGameTurns] = useState([]);
 
   const currentPlayer = deriveActivePlayer(gameTurns);
-
-  let gameBoard = [...initialGameBoard].map((array) => [...array]);
-
-  for (const turn of gameTurns) {
-    const { square, player } = turn;
-    const { row, col } = square;
-
-    gameBoard[row][col] = player;
-  }
-
+  const gameBoard = deriveGameBoard(gameTurns);
   const winner = winCheck(gameBoard, players);
   const hasDraw = gameTurns.length === 9 && !winner;
 
@@ -62,13 +49,13 @@ export function App() {
       <div id='game-container'>
         <ol id='players' className='highlight-player'>
           <Player
-            initialName='player 1'
+            initialName={PLAYERS.X}
             symbol='X'
             isActive={currentPlayer === 'X'}
             onChangeName={handlePlayerNameChange}
           />
           <Player
-            initialName='player 2'
+            initialName={PLAYERS.O}
             symbol='O'
             isActive={currentPlayer === 'O'}
             onChangeName={handlePlayerNameChange}

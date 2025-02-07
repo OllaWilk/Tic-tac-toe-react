@@ -28,3 +28,20 @@
   font-family: 'Caprasimo', cursive;
   padding: 1rem;
 }
+
+@media (max-width: 450px) {
+  #game-board {
+    gap: 1rem;
+  }
+
+  #game-board ol {
+    gap: 1rem;
+  }
+
+  #game-board button {
+    width: 6rem;
+    height: 6rem;
+    font-size: 3rem;
+    padding: 1rem;
+  }
+}

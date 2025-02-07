@@ -36,3 +36,25 @@
   text-transform: uppercase;
   color: #e1dec7;
 }
+
+@keyframes pulse-text {
+  0% {
+    color: #e1dec7;
+  }
+  50% {
+    color: #9f9d83;
+  }
+  100% {
+    color: #e1dec7;
+  }
+}
+
+@media (max-width: 450px) {
+  .player {
+    width: 100%;
+  }
+
+  .player input {
+    width: 100%;
+  }
+}

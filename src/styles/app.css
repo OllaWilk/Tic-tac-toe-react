@@ -56,3 +56,30 @@ ol {
   margin: 0;
   padding: 0;
 }
+
+@keyframes pulse {
+  0% {
+    border-color: #f6e35a;
+    box-shadow: 0 0 0 0 rgba(246, 227, 90, 0.4);
+  }
+  50% {
+    border-color: #f8c031;
+    box-shadow: 0 0 0 0.5rem rgba(248, 165, 49, 0);
+  }
+  100% {
+    border-color: #f6e35a;
+    box-shadow: 0 0 0 0 rgba(246, 227, 90, 0);
+  }
+}
+
+@media (max-width: 450px) {
+  #players {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #players li {
+    width: 90%;
+    border: 2px solid transparent;
+  }
+}
