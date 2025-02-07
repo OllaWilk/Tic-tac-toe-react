@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { WINING_COMBINATIONS } from './utils/winingCombination';
 import { deriveActivePlayer } from './utils/deriveActivePlayer';
 import { Player } from './components/Player/Player';
 import { GameBoard } from './components/GameBoard/GameBoard';
